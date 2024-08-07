@@ -10,6 +10,7 @@
     grid-template-columns: 200px 4fr;
     grid-template-rows: auto 1fr; 
     height: 100vh; 
+    overflow: visible;
 }
 
 /******* Sidebar *******/
@@ -25,8 +26,6 @@
     display: flex;
     gap: 5px;
     margin: 0;
-    box-shadow: 1px 3px 30px white;
-    border-radius: 2px 20px 2px 20px;
 }
 
 #sidebar-header img {
@@ -53,9 +52,10 @@
 #dashboard-button {
     background-color: transparent;
     border: none;
-    font-size: 22px;
-    color: darkblue;
+    font-size: 23px;
+    color: white;
     font-weight: bold;
+    margin-left: 5px;
 }
 
 #links-set-one,
@@ -87,8 +87,7 @@
     color: white;
 }
 
-#links-set-one ul li img,
-#links-set-two ul li img {
+.icon {
     filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(288deg) brightness(102%) contrast(102%)
 }
 
@@ -97,23 +96,111 @@
     background-color: darkblue;
     padding: 5px;
     width: 100%;
-    border-radius: 2px 20px 2px 20px;
+    border-radius: 2px 0px 2px 15px;
 }
 
 
 
-
-
-
+/****** Header ******/
 
 #header-grid {
-    background-color: green;
+    background-color: white;
     grid-column: 2 / 3; 
     grid-row: 1 / 2; 
+
+    display: grid;
+    grid-template-rows: 60px 100px;
+
+    border-bottom: 2px inset lightgray;
+    box-shadow: 0 4px 8px 0 rgba(255, 255, 255, 0.7);
+    z-index: 10;
 }
 
+#top-header {
+    grid-row: 1;
+    display: flex;
+    justify-content: space-between;
+    padding: 5px;
+    margin: 0 10px;
+}
+
+#search-bar {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+#search-bar input {
+    width: 17rem;
+    border-radius: 5px;
+    padding: 5px 5px;
+}
+
+#profile {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    color: black;
+    font-size: 1.1rem;
+}
+
+.profile {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+.large {
+    width: 50px;
+    height: 50px;
+}
+
+#bottom-header {
+    grid-row: 2;
+    display: flex;
+    gap: 20px;
+    padding: 10px;
+    margin: 0 20px;
+    align-items: center;
+}
+
+#user-greeting {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+#greeting {
+    display: flex;
+    flex-direction: column;
+}
+
+.header-buttons {
+    display: flex;
+    gap: 10px;
+    align-self: flex-end;
+}
+
+.header-buttons button {
+    background-color: #5C95D1;
+    font-size: 17px;
+    border: 1px inset transparent;
+    border-radius: 10px;
+    padding: 3px 15px;
+    color: white;
+}
+
+.header-buttons button:hover {
+    background-color: darkblue;
+}
+
+/****** Main Grid ******/
+
 #main-content-grid {
-    background-color: red;
+    background-color: lightgray;
     grid-column: 2 / 3;
     grid-row: 2 / 3; 
 }
+
+
