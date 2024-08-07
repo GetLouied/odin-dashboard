@@ -1,0 +1,119 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+#main-grid {
+    display: grid;
+    grid-template-columns: 200px 4fr;
+    grid-template-rows: auto 1fr; 
+    height: 100vh; 
+}
+
+/******* Sidebar *******/
+
+#sidebar-grid {
+    background-color: #5C95D1;
+    grid-column: 1 / 2; 
+    grid-row: 1 / span 2; 
+}
+
+#sidebar-header {
+    padding: 5px;
+    display: flex;
+    gap: 5px;
+    margin: 0;
+    box-shadow: 1px 3px 30px white;
+    border-radius: 2px 20px 2px 20px;
+}
+
+#sidebar-header img {
+    filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(288deg) brightness(102%) contrast(102%);
+}
+ 
+#sidebar-header img:hover {
+    filter: brightness(0) saturate(100%) invert(17%) sepia(28%) saturate(6211%) hue-rotate(230deg) brightness(79%) contrast(138%);
+    animation-name: spin;
+    animation-duration: 5000ms;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear; 
+}
+
+@keyframes spin {
+    from {
+        transform:rotate(0deg);
+    }
+    to {
+        transform:rotate(360deg);
+    }
+}
+
+#dashboard-button {
+    background-color: transparent;
+    border: none;
+    font-size: 22px;
+    color: darkblue;
+    font-weight: bold;
+}
+
+#links-set-one,
+#links-set-two {
+    margin-top: 50px;
+}
+
+#links-set-one ul,
+#links-set-two ul {
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    align-items: flex-start;
+    margin-left: 20px;
+}
+
+#links-set-one ul li, 
+#links-set-two ul li {
+    display: flex;
+    align-items: flex-end;
+    gap: 20px;
+    font-size: 18px;
+}
+
+#links-set-one ul li a,
+#links-set-two ul li a {
+    text-decoration: none;
+    color: white;
+}
+
+#links-set-one ul li img,
+#links-set-two ul li img {
+    filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(288deg) brightness(102%) contrast(102%)
+}
+
+#links-set-one ul li:hover, 
+#links-set-two ul li:hover {
+    background-color: darkblue;
+    padding: 5px;
+    width: 100%;
+    border-radius: 2px 20px 2px 20px;
+}
+
+
+
+
+
+
+
+#header-grid {
+    background-color: green;
+    grid-column: 2 / 3; 
+    grid-row: 1 / 2; 
+}
+
+#main-content-grid {
+    background-color: red;
+    grid-column: 2 / 3;
+    grid-row: 2 / 3; 
+}
